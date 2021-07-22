@@ -13,44 +13,64 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 
 <body>
-    <div class="container-fluid bg-dark">
+    <!-- Un NavBar Super Simple y Sencillo de Bootstrap -->
+    <div class="navigationbar container-fluid bg-dark">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand pl-4" href="#"><img src="assets/img/sh2.jpg" width="40px"
+                    <a class="navbar-brand pl-4" href="#"><img src="assets/img/sh2.jpg" class="rounded" width="40px"
                             alt="">SuperHero</a>
 
                 </div>
             </nav>
         </div>
     </div>
+    <br><br>
+    <!-- Esta es la Seccion de la toma de Datos -->
+    <section class="mt4">
+        <div class="text-center container centro rounded">
+            <div class="mt-5"><img src="assets/img/sh1.jpg" class="rounded" width="50%" alt=""></div>
+            <div class="row text-start mt-3 justify-content-center">
 
-    <div class="text-center container">
-        <div class="mt-5"><img src="assets/img/sh1.jpg" width="560px" alt=""></div>
-            <div class="row text-start mt-3">
-                <div class="col-2"></div>
-                <div class="col-10">
+                <div class="col-12 col-sm-8">
                     <h2>Encuentra Tu SuperHero</h2>
                     <p>Ingresa el número del SuperHero a Buscar</p>
-                    <input type="number" min="1" max="732" class="form-control" name=""  id="heroInput"><br>
-                    <button type="button" class="btn mt-2 btn-primary">Buscar</button>
+                    <form>
+                        <!-- Prefiero Declarar dentro del mismo input el rango de numeros que puedo aceptar, en el caso necesario de hacerlo con reghex seria \b([1-9]|[1-9][0-9]|[1-6][0-9][0-9]|7[0-3][0-2])\b -->
+                        <input type="number" class="form-control" min="1" max="732" name=""
+                            placeholder="Escoge Un Numero entre el 1 y el 732" id="heroInput">
+                        <button type="submit" class="btn mt-2 btn-danger col-3">Buscar</button>
+                    </form>
                 </div>
-                <div class="col-2"></div>
+
             </div>
-    </div>
-    <section>
-        <div class="row">
-            <div id="tarjeta" class="col-12 col-sm-6"></div>
-            <div id="grafico" class="col-12 col-sm-6"></div>
         </div>
     </section>
-
-
+    <!-- Aca es Donde se muestra la tarjeta y el grafico del superheroe buscado -->
+    <section class="my-5">
+        <div class="container estadisticas">
+            <div class="row justify-content-center">
+                <div id="tarjeta" class="col-12 col-lg-6"></div>
+                <div id="grafico" class="col-10 col-lg-6 rounded"></div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <!-- El Footer, aunque simple, lo saco en pantallas pequeñas porque el grafico de canvas desarma la estructura de la pagina cuando la pantalla es mas pequeña -->
+    <footer class="d-none d-lg-block">
+        <div class="container-fluid text-center bg-dark p-4"><img src="assets/img/sh2.jpg" class="rounded" width="60px"
+                alt=""></div>
+    </footer>
+    <!-- Aca cargo el script propio, y el de canvas.js -->
     <script src="assets/js/script.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 
 
 </body>

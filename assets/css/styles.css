@@ -1,0 +1,25 @@
+/* aca en los estilos nada llamativo realmente, no me gustan las paginas con fondo blanco, asi que modifique eso, y estilice lo demas de una manera que segun mi percepcion combina */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #773344;
+
+}
+footer {
+    box-shadow: 0px -12px 24px 17px #212529;
+}
+.centro {
+    background-color: #5a2734;
+    box-shadow: 0px 0px 7px 12px #5A2734;
+    color: #fff;
+    text-shadow: 2px 2px 0px #062726;
+}
+.estadisticas {
+    background-color: #5a2734;
+    box-shadow: 0px 0px 7px 12px #5A2734;
+}
+.navigationbar {
+    box-shadow: 0px 15px 9px 5px #212529;
+}
